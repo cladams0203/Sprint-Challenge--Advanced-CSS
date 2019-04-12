@@ -1,6 +1,17 @@
 // Home Content
+.nav-header {
+  width: 1000px;
+  margin: 0 auto;
+ .flexbox(center,center, column, wrap);
+ background-color: @nav-bg;
+ border: 1px solid @nav-border;
+}
+
+
 
 .home {
+
+  
 
   .intro {
 
@@ -58,6 +69,13 @@
       }
 
       .btn {
+        width:25%;
+        height: 30px;
+        text-align: center;
+        padding-top: 7px;
+        font-size: 1.5rem;
+        border-radius: 5px;
+        .btn-flip(@btn-bg-color, @sea-shell);
       }
     }
 

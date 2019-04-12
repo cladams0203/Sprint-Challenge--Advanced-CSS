@@ -1,1 +1,21 @@
 // Mixins Here
+.flexbox (@justify, @align, @direction, @wrap) {
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+    flex-direction: @direction;
+    flex-wrap: @wrap;
+}
+
+.testbor() {
+    border: 1px solid blue;
+}
+
+.btn-flip(@background, @color) {
+    background-color: @background;
+    color: @color;
+    &:hover {
+        background-color: @color;
+        color: @background;
+    }
+}
