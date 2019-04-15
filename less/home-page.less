@@ -1,6 +1,25 @@
 // Home Content
+.nav-header {
+  width: 1000px;
+  margin: 0 auto;
+ .flexbox(center,center, column, wrap);
+ background-color: @nav-bg;
+ border: 1px solid @nav-border;
+ @media @phone {
+   width: 500px;
+ }
+}
+
+
 
 .home {
+  @media @phone {
+    width:500px; 
+  }
+
+  .earth {
+    width:100%;
+  }
 
   .intro {
 
@@ -18,12 +37,22 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    
+    .img-remove {
+      @media @phone {
+        display: none;
+      }
+    }
 
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+      @media @phone {
+        .mbl-width();
+        padding: 10px;
+      }
     }
   }
 
@@ -45,9 +74,18 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
+    @media @phone {
+      flex-direction: column-reverse;
+      width:100%;
+      padding:10px;
+      margin-top:30px;
+    }
 
     .walk-text {
       width: 50%;
+      @media @phone {
+        width:100%;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -58,12 +96,28 @@
       }
 
       .btn {
+        width:25%;
+        height: 30px;
+        text-align: center;
+        padding-top: 7px;
+        font-size: 1.5rem;
+        border-radius: 5px;
+        .btn-flip(@btn-bg-color, @sea-shell);
+        @media @phone {
+          width: 100%;
+          height:50px;
+          padding-top: 17px;
+        }
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
+      @media @phone {
+        .mbl-width();
+        padding: 20px 0;
+      }
       
       img {
         width: 100%;
